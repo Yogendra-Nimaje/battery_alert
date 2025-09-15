@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomSwitchStyle">
+        <item name="colorAccent">#4CAF50</item>
+        <item name="colorControlActivated">#4CAF50</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:colorForeground">#42FFFFFF</item>
+    </style>
+</resources>

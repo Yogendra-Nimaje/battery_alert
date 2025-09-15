@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- App Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔋 Battery Alert App"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#222222"
+            android:layout_marginBottom="24dp" />
+
+        <!--battery info -->
+        <TextView
+            android:id="@+id/batteryInfoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Battery Info Loading..."
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:background="@drawable/textview_border"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical" />
+
+        <!--battery plugged or not -->
+        <TextView
+            android:id="@+id/chargingStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charging Status Loading..."
+            android:textSize="16sp"
+            android:textColor="#444444"
+            android:padding="12dp"
+            android:background="@drawable/textview_border"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical" />
+
+
+        <!-- Alert Settings Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙️ Alert Settings"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#222222"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Enable Alerts Switch -->
+        <Switch
+            android:id="@+id/enableAlertsSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Enable Battery Alerts"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="24dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <!-- High Level Alert -->
+        <TextView
+            android:id="@+id/highLevelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="High Alert: 90%"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/highLevelSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="90"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Low Level Alert -->
+        <TextView
+            android:id="@+id/lowLevelText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Low Alert: 20%"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <SeekBar
+            android:id="@+id/lowLevelSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="20"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Notes -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• High alert triggers when charging and battery reaches set level\n• Low alert triggers when not charging and battery drops to set level\n• Alerts have 30-second cooldown to prevent spam"
+            android:textSize="13sp"
+            android:textColor="#666666"
+            android:lineSpacingExtra="2dp"
+            android:alpha="0.8"
+            android:padding="8dp"
+            android:background="#F5F5F5"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
